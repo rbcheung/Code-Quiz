@@ -6,6 +6,6 @@ This project was created to allow me to practice my Javascript skills using func
 ## Demo of Coding-Quiz
 Here is a video demo of how the page looks and functions.
 
-[label](../Coding%20Quiz.mov)
+[label](../Coding%20Quiz.mp4)
 
 ## Deployed Application
