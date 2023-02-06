@@ -66,10 +66,10 @@ var questions = [
 ]
 
 
-// Function to setup Countdown. created variable called secondsLeft and set it equal to 60(seconds)
-// used setTime function. second argument passed in is 1000 aka 1 second.
+// Function to setup Countdown. created variable called secondsLeft and set it equal to 75(seconds)
+// Used setTime function. second argument passed in is 1000 aka 1 second.
 // created another variable called timeInterval and set it equal to a new function called setInterval
-// secondsLeft-- so that when this function is executed it will subtract 1 from 60 every second.
+// secondsLeft-- so that when this function is executed it will subtract 1 from 75 every second.
 // created another variable called time which is equal to document.getElementById("time");
 // time.textContent = secondsleft changes the text from the time variable to equal the secondsLeft variable.
 // if secondsLeft reaches 0, clear interval function is called and timerinterval is passed in so that it clears the countdown.
@@ -84,7 +84,7 @@ function setTime() {
 
     }, 1000);
 }
-
+// New function created to end the quiz.
 function quizEnd() {
     
     var endScreen = document.getElementById("end-screen");
@@ -111,8 +111,9 @@ function startGame() {
     setTime();
 }
 
+// If running Question index equals 3 which is the number of questions. quizEnd function is called and the quiz will end.
 function showQuestion() {
-    //  console.log(runningQuestionIndex)
+   
     if (runningQuestionIndex === 3) {
         quizEnd();
     }
@@ -129,7 +130,9 @@ function showQuestion() {
         // console.log(q.answers[2]);
     } 
 }
-
+// Added click event for each button.
+// If first button clicked and the correct answer in the questions array equals the text content of the answerA button, add to score, increment runningQuestionsIndex, display correct and go through to next question.
+// else display incorrect and subtract 5 seconds from the secondsLeft variable. increment runningQuestionsIndex variable and go through to the next question.
 answerA.addEventListener('click', function(){
     if (q.correct === answerA.textContent) {
         // console.log(q.correct)
@@ -148,7 +151,7 @@ answerA.addEventListener('click', function(){
     showQuestion();
 
    }
-
+// same logic applied as above.
 })
 answerB.addEventListener('click', function(){
     if (q.correct === answerB.textContent) {
@@ -168,7 +171,7 @@ answerB.addEventListener('click', function(){
     showQuestion();
 
    }
-
+// as none of the correct answers are C. When answerC button is clicked we only display Incorrect. Subtract from secondsLeft variable and increment the runningquestionsIndex.
 })
 answerC.addEventListener('click', function(){
     feedback.style.display = "block";
