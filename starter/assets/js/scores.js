@@ -3,7 +3,7 @@ var initials = document.querySelector("#initials");
 var submitBtn = document.querySelector("#submit");
 // console.log(submitBtn);
 var highscoresList = document.querySelector("#highscores");
-console.log(highscoresList);
+// console.log(highscoresList);
 var endScreen = document.querySelector("#end-screen");
 // console.log(endScreen);
 var finalScore = document.querySelector("#final-score");
